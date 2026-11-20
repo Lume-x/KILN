@@ -1,0 +1,2301 @@
+# KILN — FULL MVP DEVELOPMENT MASTER PROMPT
+
+## TURN WASTE INTO WORTH.
+
+Build a complete, functional, responsive, production-structured web application called **KILN**.
+
+This is a full-stack software development task. I do not want a static website, a UI-only prototype, a collection of disconnected pages or an application that uses fake interactions.
+
+I want you to build a functional MVP with a real backend, persistent database, authentication, role-based permissions, collection workflows, weight verification, rewards, inventory management, redemption, reports, Bitcoin Lightning integration in demo-first mode, optional Nostr functionality, an AI-assisted waste sorter, and a responsive user interface.
+
+Work systematically. Inspect your environment and available tools before implementation. Plan the architecture, implement the application, test it, correct errors and verify that the critical workflows work end-to-end.
+
+Do not stop after generating the landing page.
+
+---
+
+# PART 1 — PRODUCT DEFINITION
+
+## 1.1 Project name
+
+**KILN**
+
+Tagline:
+
+**Turn Waste Into Worth.**
+
+KILN is a community recycling, waste collection, material recovery and rewards platform.
+
+## 1.2 Pilot location
+
+The initial pilot area is:
+
+Federal University of Technology, Owerri (FUTO), and surrounding communities in Imo State, Nigeria.
+
+The application should be designed for a community-based pilot and should work well for students, households, small businesses, collection agents and administrators.
+
+The application must not assume that the business already has large collection volumes, established partnerships or an operational energy facility.
+
+## 1.3 Core problem
+
+Recyclable materials are frequently discarded as ordinary waste despite their potential economic value.
+
+People may lack:
+
+- Convenient recycling collection.
+- Accessible collection points.
+- Information about recyclable materials.
+- Incentives to sort and submit recyclable waste.
+- Transparency about the value of their contributions.
+
+Recycling businesses and material processors also need reliable access to appropriately sorted materials.
+
+## 1.4 KILN's solution
+
+KILN creates a digital system connecting recyclable material suppliers, collection agents, administrators and recycling buyers.
+
+The platform enables:
+
+1. Users to register and participate.
+2. Users to request recyclable waste collection or drop materials at approved collection points.
+3. Agents to inspect, classify, weigh and record materials.
+4. Administrators to verify collection records.
+5. Users to earn rewards based on verified eligible weight.
+6. Users to redeem rewards through approved methods.
+7. Administrators to manage material inventory and sales.
+8. The business to trace collected materials from supplier to final transfer or sale.
+9. The platform to publish privacy-preserving environmental impact records.
+10. The business to develop future resource recovery and Waste-to-Energy capabilities.
+
+## 1.5 Project scope
+
+The MVP consists of:
+
+- Public website.
+- Authentication.
+- User dashboard.
+- Collection agent dashboard.
+- Administrator dashboard.
+- Collection request system.
+- Material verification.
+- Reward wallet and ledger.
+- Redemption system.
+- Bitcoin Lightning demonstration integration.
+- Optional NWC wallet integration.
+- Optional Nostr identity authentication.
+- AI-assisted waste classification.
+- Learn & Earn modules.
+- Material inventory.
+- Material batching.
+- Material sales and transfers.
+- Notifications.
+- Reports.
+- CSV exports.
+- Audit logs.
+- Future W2E readiness.
+
+The application must be functional, not merely presentational.
+
+---
+
+# PART 2 — BRAND AND DESIGN SYSTEM
+
+## 2.1 Brand identity
+
+Brand name: KILN
+
+Tagline: Turn Waste Into Worth.
+
+KILN should feel like a credible environmental technology company combining resource recovery, community infrastructure, software and sustainability.
+
+The visual identity must not resemble a generic AI-generated SaaS template.
+
+## 2.2 Design direction
+
+Use a premium industrial-editorial visual direction.
+
+The interface should feel:
+
+- Sophisticated.
+- Distinctive.
+- Clean.
+- Professional.
+- Credible.
+- Technologically forward.
+- Human.
+- Environmental without relying on cliché.
+
+Design inspiration should come from premium industrial technology, contemporary climate-tech companies, editorial layouts and modern infrastructure brands.
+
+Do not imitate a particular website.
+
+## 2.3 Colour palette
+
+Use a restrained palette:
+
+- Deep forest green: primary brand colour.
+- Warm off-white or ivory: major background colour.
+- Charcoal: primary text and dark surfaces.
+- Muted grey: secondary text and borders.
+- Burnt orange or amber: restrained accent.
+
+Suggested starting tokens:
+
+- Forest Green: `#17372D`
+- Deep Green: `#14532D`
+- Warm Off-white: `#F7F6F2`
+- Charcoal: `#171B19`
+- Muted Grey: `#727873`
+- Restrained Amber: `#C98535`
+
+These values may be adjusted to create a coherent and accessible design system.
+
+Avoid:
+
+- Excessive gradients.
+- Neon green.
+- Glowing buttons.
+- Purple or blue SaaS gradients.
+- Glassmorphism overuse.
+- Decorative colour effects.
+- Excessive rounded corners.
+
+## 2.4 Typography
+
+Use a carefully chosen professional typography system.
+
+Typography should establish:
+
+- Clear hierarchy.
+- Distinctive headings.
+- Highly readable body text.
+- Appropriate dashboard text sizes.
+- Accessible form labels.
+
+Do not make every headline oversized.
+
+Do not use typography merely to imitate fashionable startup websites.
+
+## 2.5 Anti-generic design rules
+
+Strictly avoid:
+
+- The conventional centred hero with pill badge, huge headline, two buttons and three statistics.
+- Repeated three-card sections.
+- Floating cards for every element.
+- Unnecessary rounded containers.
+- Fake testimonials.
+- Fake statistics.
+- Fake customer logos.
+- Decorative AI illustrations.
+- Floating green leaves.
+- Random emojis in headings.
+- Excessive animation.
+- Meaningless dashboard charts.
+- Generic marketing slogans.
+- Excessive whitespace without intentional composition.
+
+Use:
+
+- Editorial layouts.
+- Strong alignment.
+- Meaningful whitespace.
+- Asymmetric compositions where appropriate.
+- Purposeful imagery.
+- Proper information hierarchy.
+- Clear navigation.
+- Well-designed tables and forms.
+- Functional status indicators.
+- Responsive layouts.
+
+## 2.6 Imagery
+
+Use relevant, high-quality photographs depicting:
+
+- Recyclable materials.
+- Plastic bottles.
+- Aluminium cans.
+- Paper and cardboard.
+- Material sorting.
+- Collection operations.
+- Community recycling.
+- Material recovery infrastructure.
+
+Use photographs that support the content.
+
+Do not use random stock images simply to fill sections.
+
+If image generation or external image retrieval is unavailable, design elegant image placeholders with clear dimensions and descriptions. Do not break the layout.
+
+## 2.7 Responsive design
+
+The entire application must work on:
+
+- Desktop.
+- Laptop.
+- Tablet.
+- Mobile phones.
+
+Test at approximately:
+
+- 1366 × 768.
+- 1024 × 768.
+- 390 × 844.
+- 360 × 800.
+
+Design mobile layouts deliberately rather than simply shrinking desktop layouts.
+
+Collection agents must be able to use the interface on a phone while collecting and weighing materials.
+
+Mobile controls should have touch targets of at least 44px where practical.
+
+## 2.8 Accessibility
+
+Implement:
+
+- Accessible contrast.
+- Visible keyboard focus.
+- Semantic HTML.
+- Explicit form labels.
+- Accessible error messages.
+- Keyboard navigability.
+- Appropriate ARIA attributes where needed.
+- Accessible modal and navigation behaviour.
+
+Aim for WCAG AA contrast.
+
+---
+
+# PART 3 — TECHNOLOGY AND ARCHITECTURE
+
+## 3.1 Preferred stack
+
+Use:
+
+- Python 3.12+.
+- Django 5+.
+- Django REST Framework where appropriate.
+- PostgreSQL.
+- Django Templates.
+- Tailwind CSS.
+- HTMX.
+- Lightweight JavaScript.
+
+Use a modular Django architecture.
+
+Do not introduce unnecessary frontend frameworks or complicated infrastructure.
+
+A well-structured Django application with server-rendered templates and HTMX is the preferred implementation.
+
+## 3.2 Database
+
+PostgreSQL is the primary database.
+
+Provide a SQLite fallback for local development if PostgreSQL is unavailable and the environment permits it.
+
+Database settings must be configurable through environment variables.
+
+## 3.3 Architecture
+
+Organise the project into logical Django apps, such as:
+
+- accounts.
+- collections.
+- materials.
+- rewards.
+- inventory.
+- learning.
+- integrations.
+- notifications.
+- reporting.
+
+Avoid placing the entire application in one giant file.
+
+Use service modules for integrations and sensitive business operations.
+
+## 3.4 Environment configuration
+
+Use environment variables.
+
+Provide:
+
+- `.env.example`
+- `SECRET_KEY`
+- `DATABASE_URL`
+- `AI_API_KEY`
+- `AI_PROVIDER`
+- `NWC_URL`
+- `NOSTR_PRIVATE_KEY`
+- `NOSTR_RELAY_URLS`
+- `POINTS_TO_SATS_RATE`
+- `MIN_REDEMPTION_POINTS`
+- `DEMO_MODE`
+
+Do not commit secrets.
+
+---
+
+# PART 4 — USER ROLES AND PERMISSIONS
+
+Implement three primary roles.
+
+## 4.1 Regular user
+
+Regular users include students, households and businesses.
+
+Users can:
+
+- Register.
+- Log in.
+- Log out.
+- Edit their profile.
+- View material categories.
+- Request collection.
+- Choose pickup or drop-off.
+- Submit material photographs.
+- Use the AI-assisted waste sorter.
+- View collection statuses.
+- View verified material quantities.
+- View their reward wallet.
+- View their transaction history.
+- Submit redemption requests.
+- Connect optional Lightning payout methods.
+- Connect optional Nostr identity.
+- Complete Learn & Earn modules.
+- View notifications.
+- View their own recycling contribution history.
+
+Users must not:
+
+- Edit verified weights.
+- Approve their own submissions.
+- Change reward rates.
+- Alter wallet balances.
+- Access other users' private records.
+- Access administrative functionality.
+
+## 4.2 Collection agents
+
+Collection agents can:
+
+- Log in.
+- View their agent dashboard.
+- View assigned collection requests.
+- Accept or reject assignments.
+- Update collection progress.
+- Record actual material weight.
+- Record rejected weight.
+- Record quality grade.
+- Record contamination notes.
+- Upload optional evidence photographs.
+- Submit collection records for administrator verification.
+- View their completed collections.
+- View their collection performance.
+
+Agents must not:
+
+- Configure reward rates.
+- Approve verification records.
+- Directly credit user wallets.
+- Create administrator accounts.
+- Access private information unrelated to assigned tasks.
+
+## 4.3 Administrators
+
+Administrators can:
+
+- View operational dashboards.
+- Manage users.
+- Manage agents.
+- Manage material categories.
+- Manage reward rates.
+- Manage collection points.
+- Assign collection agents.
+- Approve or reject verifications.
+- Review redemption requests.
+- Manage material inventory.
+- Create material batches.
+- Record sales and transfers.
+- Configure reward options.
+- Configure points-to-sats conversion.
+- Configure learning bonuses.
+- Manage collection rules.
+- View audit logs.
+- Generate reports.
+- Export reports.
+- Manage approved demo and integration settings.
+
+## 4.4 Role enforcement
+
+Implement server-side role enforcement.
+
+Do not rely on hiding frontend buttons.
+
+Protect:
+
+- Routes.
+- Views.
+- API endpoints.
+- Administrative actions.
+- Sensitive database operations.
+
+Users must never access another user's wallet, submissions or personal records through direct URL manipulation.
+
+---
+
+# PART 5 — PUBLIC WEBSITE
+
+Build a complete public-facing website.
+
+## 5.1 Navigation
+
+Include:
+
+- KILN logo.
+- About.
+- How It Works.
+- Materials.
+- Pilot.
+- Learn.
+- Sign In.
+- Start Recycling.
+
+Navigation must be responsive.
+
+## 5.2 Homepage hero
+
+Use a distinctive editorial hero layout.
+
+Do not use the generic centred AI-generated hero composition.
+
+The hero must explain KILN clearly.
+
+Explore a headline such as:
+
+"Waste is a resource. We make its recovery possible."
+
+Supporting text should explain that KILN connects communities to recyclable waste collection, material recovery and rewards.
+
+Provide clear calls to action:
+
+- Start Recycling.
+- How It Works.
+
+Use meaningful imagery.
+
+## 5.3 What KILN does
+
+Explain the recycling system.
+
+Describe:
+
+- Waste submission.
+- Collection.
+- Verification.
+- Rewards.
+- Material recovery.
+
+## 5.4 How it works
+
+Present the workflow:
+
+1. Sort recyclable materials.
+2. Submit a collection request or drop off materials.
+3. An agent inspects and weighs the materials.
+4. Verified materials earn rewards.
+5. Materials enter the recovery and recycling supply chain.
+
+Use an intentional visual layout rather than repeated generic cards.
+
+## 5.5 Materials
+
+Display the currently accepted material categories.
+
+Material categories must be retrieved from the database.
+
+Display:
+
+- Material name.
+- Image.
+- Description.
+- Acceptance information.
+- Contamination requirements where available.
+
+## 5.6 Pilot information
+
+Explain the FUTO/Owerri pilot.
+
+Do not claim that locations, partners, facilities or volumes are operational unless they are actually confirmed.
+
+## 5.7 Community impact
+
+Display impact metrics from actual database records.
+
+Metrics may include:
+
+- Verified kilograms collected.
+- Number of verified collections.
+- Number of active participants.
+- Material breakdown.
+
+If the database has no real data, display a suitable empty state or clearly labelled demo mode.
+
+Never fabricate real-world impact metrics.
+
+## 5.8 Learn
+
+Provide a section explaining the learning and recycling education features.
+
+## 5.9 Partnerships
+
+Provide a contact or partnership section for:
+
+- Recycling businesses.
+- Community organisations.
+- Businesses.
+- Collection partners.
+
+Do not fabricate partners or testimonials.
+
+## 5.10 Footer
+
+Include:
+
+- Navigation.
+- Contact information placeholder.
+- Privacy policy placeholder.
+- Terms placeholder.
+- Brand information.
+
+---
+
+# PART 6 — AUTHENTICATION
+
+## 6.1 Standard authentication
+
+Implement:
+
+- Registration.
+- Email and password login.
+- Logout.
+- Password change.
+- Password reset if supported by the environment.
+- Profile management.
+
+## 6.2 User registration
+
+Registration should collect only necessary information.
+
+Possible fields:
+
+- Full name.
+- Email.
+- Phone number, optional or required according to configured pilot rules.
+- Password.
+- Community area.
+- Terms acceptance.
+
+Create the appropriate user profile and wallet.
+
+## 6.3 Optional Nostr authentication
+
+Implement optional Nostr identity authentication using a proper challenge-signing protocol.
+
+If NIP-07 browser signing is supported:
+
+1. Generate a server-side challenge nonce.
+2. Ask the browser extension to sign the challenge.
+3. Verify the signature server-side.
+4. Validate the challenge and prevent replay.
+5. Associate the authenticated public key with an account.
+
+Nostr authentication must not be confused with Nostr Wallet Connect.
+
+If Nostr authentication cannot be implemented reliably in the available environment, provide a clean optional integration foundation and document the limitation.
+
+Standard email/password authentication must always remain available.
+
+---
+
+# PART 7 — MATERIAL CATEGORIES
+
+Seed the initial categories:
+
+1. Plastic Bottles.
+2. Aluminium Cans.
+3. Paper.
+4. Cardboard.
+
+The application must allow administrators to add, edit and deactivate material categories.
+
+Each category should have:
+
+- Name.
+- Slug.
+- Description.
+- Image.
+- Unit.
+- Reward rate.
+- Quality requirements.
+- Contamination rules.
+- Stream type.
+- Active status.
+
+Default unit: kilograms.
+
+Stream types:
+
+- RECYCLABLE.
+- ORGANIC_W2E.
+- RESIDUAL.
+
+Only the initial recyclable categories should be active unless administrators add additional categories.
+
+Keep organic waste and residual materials separate from recyclable material categories.
+
+---
+
+# PART 8 — COLLECTION POINT MANAGEMENT
+
+Create a collection point management system.
+
+Collection points should have:
+
+- Name.
+- Address.
+- Description.
+- Contact information.
+- Operating hours.
+- Status.
+- Optional coordinates.
+
+Administrators can:
+
+- Create collection points.
+- Edit collection points.
+- Activate/deactivate points.
+- Manage operating information.
+
+Users can view available collection points.
+
+Use clearly labelled demo collection points when seeding demo data.
+
+Do not present demonstration addresses as real operational facilities.
+
+---
+
+# PART 9 — COLLECTION REQUESTS
+
+## 9.1 Request creation
+
+Users should be able to create a collection request.
+
+The form should capture:
+
+- Material category.
+- Estimated weight.
+- Collection method.
+- Pickup address or collection point.
+- Preferred collection window.
+- Notes.
+- Optional photo.
+- Optional AI classification result.
+
+Collection methods:
+
+- PICKUP.
+- DROP_OFF.
+
+## 9.2 Pickup
+
+For pickup requests, users should provide:
+
+- Address.
+- Community area.
+- Directions or landmarks.
+- Preferred collection time window.
+
+## 9.3 Drop-off
+
+For drop-off requests:
+
+- User selects an approved collection point.
+- User sees available information about the point.
+- User selects a preferred submission time where applicable.
+
+## 9.4 Request reference
+
+Generate a unique collection reference code.
+
+## 9.5 Request statuses
+
+Implement:
+
+- PENDING.
+- APPROVED.
+- ASSIGNED.
+- ACCEPTED_BY_AGENT.
+- IN_PROGRESS.
+- COLLECTED.
+- AWAITING_VERIFICATION.
+- VERIFIED.
+- REJECTED.
+- CANCELLED.
+
+Enforce valid transitions.
+
+A request must not become VERIFIED without a properly approved WeightVerification record.
+
+---
+
+# PART 10 — AGENT ASSIGNMENT
+
+Administrators can assign collection agents.
+
+Each assignment should record:
+
+- Collection request.
+- Agent.
+- Assigned by.
+- Assignment date.
+- Agent response.
+- Assignment status.
+
+Agents must be able to accept or reject assignments.
+
+Record timestamps.
+
+Do not allow unauthorised agents to access other agents' assignments.
+
+---
+
+# PART 11 — WEIGHT VERIFICATION
+
+## 11.1 Agent collection record
+
+Agents should record:
+
+- Actual weight.
+- Rejected weight.
+- Eligible weight.
+- Material category.
+- Quality grade.
+- Contamination notes.
+- Collection date.
+- Evidence photo.
+- Agent notes.
+
+Eligible weight must not exceed the total accepted actual weight.
+
+Validate the relationship between:
+
+- Actual weight.
+- Rejected weight.
+- Eligible weight.
+
+Use decimal fields.
+
+## 11.2 Verification process
+
+1. Agent records the material.
+2. Agent submits the record.
+3. Request moves to awaiting verification.
+4. Administrator reviews.
+5. Administrator approves or rejects.
+6. If approved, the system calculates rewards.
+7. The material is added to inventory.
+8. The user receives a notification.
+
+## 11.3 Verification integrity
+
+Only an administrator or appropriately authorised verifier can approve a verification.
+
+Users cannot approve their own submissions.
+
+Agents cannot directly credit wallets.
+
+Only approved verifications may generate collection rewards.
+
+Prevent duplicate credits.
+
+Use database constraints and transactional processing.
+
+---
+
+# PART 12 — REWARD RATE MANAGEMENT
+
+Administrators can configure reward rates.
+
+Each reward rate should include:
+
+- Material category.
+- Points per kilogram.
+- Effective date.
+- Changed by.
+- Reason.
+- Status.
+
+Reward rates must be clearly labelled DEMO until actual business rates are established.
+
+## 12.1 Reward calculation
+
+Use:
+
+`points_earned = verified_eligible_weight × applied_reward_rate`
+
+Use Decimal arithmetic.
+
+The reward must be calculated from verified eligible weight.
+
+Estimated weight must never generate points.
+
+## 12.2 Rate history
+
+Record changes to rates.
+
+Historical transactions must preserve the rate that was applied when the reward was calculated.
+
+Changing the current rate must not modify previous transactions.
+
+---
+
+# PART 13 — REWARD WALLET AND TRANSACTION LEDGER
+
+## 13.1 Wallet
+
+Every user should have a reward wallet.
+
+Display:
+
+- Available points.
+- Total earned.
+- Total redeemed.
+- Pending redemptions.
+- Recent transactions.
+
+## 13.2 Ledger
+
+Implement a transaction-based wallet ledger.
+
+Transaction types:
+
+- COLLECTION_REWARD.
+- LEARNING_BONUS.
+- REDEMPTION.
+- ADMIN_ADJUSTMENT.
+- REVERSAL.
+
+Each transaction must have:
+
+- Unique transaction reference.
+- Wallet.
+- Transaction type.
+- Points.
+- Related verification.
+- Related redemption.
+- Description.
+- Status.
+- Timestamp.
+
+## 13.3 Integrity
+
+Do not permit arbitrary balance changes.
+
+Wallet balance should be derived from the ledger or maintained through a transactionally consistent ledger-backed balance.
+
+Use:
+
+- Database transactions.
+- Row locking where appropriate.
+- Unique constraints.
+- Idempotency protections.
+
+Prevent duplicate reward credits.
+
+Prevent negative balances.
+
+Manual adjustments must require a reason and create an audit log.
+
+---
+
+# PART 14 — REWARD REDEMPTION
+
+Users can request redemption of earned points.
+
+Administrators configure:
+
+- Minimum redemption points.
+- Available redemption methods.
+- Points-to-sats conversion rate.
+- Demo payout settings.
+
+## 14.1 Redemption methods
+
+Include:
+
+1. Bitcoin Lightning.
+2. Bank transfer.
+3. Airtime.
+4. Mobile data.
+5. Voucher or campus reward.
+
+The non-Bitcoin methods should initially be manual administrative workflows.
+
+## 14.2 Redemption request
+
+Capture:
+
+- User.
+- Points requested.
+- Redemption method.
+- Destination details where needed.
+- Estimated value.
+- Reference code.
+- Status.
+
+## 14.3 Redemption statuses
+
+Implement:
+
+- PENDING.
+- APPROVED.
+- REJECTED.
+- PROCESSING.
+- PAID.
+- FAILED.
+- CANCELLED.
+
+## 14.4 Redemption integrity
+
+Prevent users from redeeming the same points more than once.
+
+Pending redemptions should appropriately reserve or account for points to prevent double spending.
+
+Use atomic transactions.
+
+## 14.5 Manual payout workflow
+
+For bank transfer, airtime, mobile data and vouchers:
+
+1. User submits request.
+2. Administrator reviews.
+3. Administrator approves or rejects.
+4. Administrator records payment reference where applicable.
+5. Administrator marks the request as paid.
+6. System records the ledger transaction.
+7. User receives notification.
+
+Do not integrate banking services unless a supported service and credentials are available.
+
+---
+
+# PART 15 — BITCOIN LIGHTNING INTEGRATION
+
+Bitcoin Lightning is a KILN hackathon feature, but it must be safely implemented.
+
+## 15.1 Integration architecture
+
+Create a modular service:
+
+`services/lightning.py`
+
+It should support:
+
+- Resolving supported Lightning addresses where appropriate.
+- Invoice generation or payment workflow where the selected provider supports it.
+- NWC integration where configured.
+- Payment status recording.
+- Error handling.
+- Demo mode.
+
+## 15.2 NWC
+
+Nostr Wallet Connect is an optional wallet connection.
+
+It is not a login mechanism.
+
+Do not treat an NWC URI as a public identifier.
+
+Do not expose NWC credentials in frontend logs, analytics, browser-visible URLs, audit logs or public receipts.
+
+If an NWC URI must be stored:
+
+- Protect it using appropriate secret storage or encryption.
+- Restrict access.
+- Never display it in full after initial configuration.
+- Do not store it unnecessarily.
+- Document the security limitations.
+
+## 15.3 Lightning redemption
+
+The redemption flow should:
+
+1. Calculate the sats value from a configurable conversion rate.
+2. Display the expected value.
+3. Obtain an invoice or payment destination.
+4. Require appropriate approval.
+5. Initiate payment through the configured provider.
+6. Record the payment status.
+7. Record relevant payment references.
+8. Notify the user.
+
+Do not automatically pay real funds in the default demo mode.
+
+## 15.4 Demo mode
+
+If no NWC provider or real Lightning service is configured:
+
+- Use a clearly labelled simulated payment workflow.
+- Simulated payments must never be presented as real Bitcoin payments.
+- Do not generate fake payment preimages.
+- Do not use real payment identifiers in simulation.
+- Clearly display SIMULATED PAYMENT.
+- Maintain a separate simulation identifier.
+- Do not publish simulated payments as real proof of financial activity.
+
+The demo must allow judges or pilot testers to exercise the entire redemption flow safely.
+
+## 15.5 Conversion
+
+Administrators can configure:
+
+- Points-to-sats conversion.
+- Minimum redemption points.
+- Demo payout settings.
+
+Do not hardcode financial assumptions.
+
+The reward points and Bitcoin value must be clearly distinguished.
+
+---
+
+# PART 16 — AI WASTE SORTER
+
+Create an AI-assisted waste classification feature.
+
+## 16.1 Purpose
+
+Help users understand which material they are submitting and how to prepare it.
+
+The AI is an advisory tool.
+
+It does not replace agent inspection, physical weighing or administrator verification.
+
+## 16.2 Input
+
+Allow:
+
+- Image upload.
+- Text description.
+
+## 16.3 Output
+
+The classifier should return:
+
+- Suggested material category.
+- Confidence score where supported.
+- Potential contamination observations.
+- Sorting instructions.
+- Preparation guidance.
+- Submission tips.
+
+## 16.4 Categories
+
+The classifier should recognise the initial categories:
+
+- Plastic bottles.
+- Aluminium cans.
+- Paper.
+- Cardboard.
+
+It should also identify unsuitable or ambiguous materials when possible.
+
+## 16.5 Integration
+
+Create:
+
+`services/ai_sorter.py`
+
+Use a configured AI API provider if available.
+
+Do not hardcode provider secrets.
+
+## 16.6 Fallback
+
+When AI integration is unavailable:
+
+- Use a deterministic rule-based classifier for text.
+- Allow manual category selection.
+- Explain that the classification is a suggestion.
+- Do not pretend image classification occurred if it did not.
+
+## 16.7 Guidance
+
+Provide guidance in:
+
+- Plain English.
+- Nigerian Pidgin.
+
+Examples of guidance:
+
+- Remove remaining liquid from bottles.
+- Avoid submitting contaminated materials.
+- Keep materials dry where required.
+- Separate different categories.
+
+Do not invent material acceptance specifications. Use administrator-configured guidance.
+
+---
+
+# PART 17 — NOSTR PROOF-OF-RECYCLING
+
+Create a modular service:
+
+`services/nostr_publisher.py`
+
+## 17.1 Purpose
+
+Publish privacy-preserving records of verified recycling activities.
+
+## 17.2 Publishing conditions
+
+Only publish after a verification has been genuinely approved.
+
+Never publish:
+
+- User names.
+- User email addresses.
+- Phone numbers.
+- Pickup addresses.
+- Nostr identity of the recycler unless explicitly opted in and safe.
+- Photographs.
+- Personal information.
+- Wallet credentials.
+- Private collection notes.
+
+## 17.3 Event information
+
+A proof event may contain:
+
+- Application name.
+- Pilot hub.
+- Material category.
+- Verified kilograms.
+- Material batch reference.
+- Timestamp.
+
+Example conceptually:
+
+`KILN | FUTO-Owerri | Plastic Bottles | 12.50 kg | Batch reference | Timestamp`
+
+Do not hardcode example data into real event publishing.
+
+## 17.4 Event handling
+
+- Use configured relays.
+- Publish only verified data.
+- Record the event ID.
+- Handle failed publishing.
+- Provide retry functionality where appropriate.
+- Do not block reward crediting if Nostr relays are unavailable.
+- Avoid duplicate publication.
+- Clearly label demo events.
+- Do not publish demo data as real impact.
+
+## 17.5 Key management
+
+Use properly managed signing keys.
+
+Do not generate and expose a production private key casually.
+
+Do not put private keys into frontend code.
+
+Use environment variables or an appropriate secret management mechanism.
+
+Clearly distinguish demo keys from production keys.
+
+---
+
+# PART 18 — LEARN & EARN
+
+Build a learning module inside the user dashboard.
+
+## 18.1 Purpose
+
+Teach users about recycling, Bitcoin Lightning and wallet safety.
+
+## 18.2 Modules
+
+Create three modules:
+
+### Module 1
+
+Sorting Plastics, Cans, Paper and Cardboard.
+
+### Module 2
+
+Understanding Satoshis and Bitcoin Lightning.
+
+### Module 3
+
+Bitcoin Wallet Security, NWC Permissions and Scam Awareness.
+
+## 18.3 Content
+
+Each module should contain:
+
+- Short lessons.
+- Plain English.
+- Nigerian Pidgin summaries.
+- Examples.
+- Three-question quiz.
+
+## 18.4 Completion
+
+When a user passes the quiz:
+
+- Record completion.
+- Award configurable demo bonus points.
+- Create a ledger transaction.
+- Prevent duplicate completion rewards.
+
+Use a uniqueness constraint on:
+
+- User.
+- Module.
+
+## 18.5 Reward
+
+Learning bonus points must be clearly identified.
+
+Learning bonuses must not be confused with verified recycling rewards.
+
+Administrators should be able to configure learning bonuses.
+
+---
+
+# PART 19 — INVENTORY MANAGEMENT
+
+Create a material inventory system.
+
+## 19.1 Inventory entries
+
+When a verification is approved, create an inventory entry.
+
+Record:
+
+- Verification.
+- Material category.
+- Weight.
+- Quality grade.
+- Collection point.
+- Batch.
+- Inventory status.
+- Timestamp.
+
+## 19.2 Inventory statuses
+
+Implement:
+
+- RECEIVED.
+- SORTED.
+- STORED.
+- BATCHED.
+- SOLD.
+- TRANSFERRED.
+- REJECTED.
+
+## 19.3 Traceability
+
+Inventory entries must be traceable to the original collection record and verification.
+
+Administrators must be able to view:
+
+- Source.
+- Collection date.
+- Agent.
+- Material category.
+- Weight.
+- Batch.
+- Destination.
+
+---
+
+# PART 20 — MATERIAL BATCH MANAGEMENT
+
+Create a material batching system.
+
+## 20.1 Batch creation
+
+Administrators can group compatible inventory records into a batch.
+
+A batch must contain:
+
+- Unique batch reference.
+- Material category.
+- Total weight.
+- Source inventory entries.
+- Creation date.
+- Status.
+- Optional notes.
+
+## 20.2 Batch rules
+
+- Do not mix incompatible material categories.
+- Ensure batch quantities are consistent with source inventory.
+- Prevent double allocation of the same inventory.
+- Preserve traceability.
+- Support partial batch quantities where the business process allows it.
+
+## 20.3 Batch statuses
+
+- OPEN.
+- STORED.
+- READY_FOR_TRANSFER.
+- TRANSFERRED.
+- SOLD.
+- CLOSED.
+
+---
+
+# PART 21 — MATERIAL SALES AND TRANSFERS
+
+Administrators can record sales or transfers.
+
+Capture:
+
+- Buyer name.
+- Buyer details where appropriate.
+- Material batch.
+- Material category.
+- Quantity.
+- Unit price.
+- Total value.
+- Transaction date.
+- Transfer status.
+- Payment status.
+- Recording administrator.
+
+## 21.1 Transfer status
+
+- PENDING.
+- PREPARED.
+- TRANSFERRED.
+- CANCELLED.
+
+## 21.2 Payment status
+
+- UNPAID.
+- PARTIALLY_PAID.
+- PAID.
+- FAILED.
+- NOT_APPLICABLE.
+
+Transfer status and payment status must be separate.
+
+Recording a transfer must not automatically imply payment has been received.
+
+## 21.3 Inventory consistency
+
+Prevent selling or transferring quantities exceeding available inventory.
+
+Maintain traceability.
+
+---
+
+# PART 22 — NOTIFICATIONS
+
+Implement in-app notifications.
+
+Users receive notifications for:
+
+- Collection request creation.
+- Collection request approval.
+- Agent assignment.
+- Agent acceptance.
+- Collection progress.
+- Collection completion.
+- Verification approval.
+- Verification rejection.
+- Reward credit.
+- Redemption request.
+- Redemption approval.
+- Redemption rejection.
+- Payment completion.
+- Learning completion.
+
+Agents receive notifications for assignments.
+
+Administrators receive notifications for:
+
+- Pending verifications.
+- Pending redemptions.
+- Important operational events.
+
+Implement:
+
+- Notification list.
+- Read/unread status.
+- Mark as read.
+- Notification links.
+- Notification timestamps.
+
+Email and SMS can be future integrations.
+
+---
+
+# PART 23 — USER DASHBOARD
+
+Create a functional user dashboard.
+
+## 23.1 Overview
+
+Display:
+
+- Welcome message.
+- Available points.
+- Estimated sats equivalent where configured.
+- Total verified kilograms.
+- Total verified collections.
+- Pending collection requests.
+- Recent activities.
+
+## 23.2 Actions
+
+Provide:
+
+- Request Collection.
+- View Collection History.
+- View Rewards.
+- Redeem Rewards.
+- Learn & Earn.
+- View Notifications.
+
+## 23.3 Collection history
+
+Display:
+
+- Reference.
+- Material.
+- Estimated weight.
+- Verified weight.
+- Status.
+- Date.
+
+## 23.4 Wallet
+
+Display:
+
+- Balance.
+- Total earned.
+- Total redeemed.
+- Pending redemptions.
+- Ledger history.
+
+## 23.5 Learning
+
+Display:
+
+- Modules.
+- Completion status.
+- Progress.
+- Bonus credits.
+
+## 23.6 Profile
+
+Allow users to manage:
+
+- Name.
+- Phone.
+- Community.
+- Address.
+- Optional Lightning Address.
+- Optional Nostr identity.
+
+Do not expose sensitive wallet connection secrets.
+
+---
+
+# PART 24 — COLLECTION AGENT DASHBOARD
+
+Build a mobile-first agent dashboard.
+
+## 24.1 Overview
+
+Display:
+
+- Assigned requests.
+- Pending assignments.
+- Accepted assignments.
+- In-progress collections.
+- Completed collections.
+
+## 24.2 Assignment list
+
+Display:
+
+- Request reference.
+- User name where necessary.
+- Material category.
+- Collection method.
+- Pickup address or collection point.
+- Preferred window.
+- Status.
+
+## 24.3 Assignment workflow
+
+Agents can:
+
+- Accept.
+- Reject.
+- Begin collection.
+- Mark collected.
+- Submit weight verification record.
+
+## 24.4 Weight recording form
+
+Include:
+
+- Material category.
+- Actual weight.
+- Rejected weight.
+- Eligible weight.
+- Quality grade.
+- Contamination notes.
+- Photo evidence.
+- Comments.
+
+## 24.5 Agent history
+
+Display:
+
+- Completed assignments.
+- Collection dates.
+- Material categories.
+- Verified weights.
+- Status.
+
+The agent interface must be easy to operate on a mobile phone.
+
+---
+
+# PART 25 — ADMINISTRATOR DASHBOARD
+
+Build a comprehensive operational dashboard.
+
+## 25.1 Dashboard metrics
+
+Calculate from actual database records:
+
+- Total registered users.
+- Active agents.
+- Collection requests.
+- Pending requests.
+- Completed collections.
+- Pending verifications.
+- Verified kilograms.
+- Verified collections.
+- Material category breakdown.
+- Points issued.
+- Pending redemptions.
+- Inventory available.
+- Material batches.
+- Material sales.
+
+Do not hardcode dashboard metrics.
+
+## 25.2 Collection management
+
+Administrators can:
+
+- View all collection requests.
+- Filter by status.
+- Filter by category.
+- Filter by location.
+- Filter by date.
+- Assign agents.
+- Review submissions.
+- Approve or reject verification.
+
+## 25.3 Material management
+
+Administrators can:
+
+- Create material categories.
+- Edit categories.
+- Deactivate categories.
+- Configure rates.
+- Configure acceptance rules.
+
+## 25.4 Reward management
+
+Administrators can:
+
+- Configure rates.
+- View reward transactions.
+- View wallets.
+- Make manual adjustments with mandatory reasons.
+- Review redemptions.
+- Process approved redemptions.
+
+## 25.5 Inventory
+
+Administrators can:
+
+- View inventory.
+- Create batches.
+- Allocate inventory.
+- Record sales.
+- Record transfers.
+- View traceability.
+
+## 25.6 Reporting
+
+Administrators can:
+
+- View collection reports.
+- View reward reports.
+- View inventory reports.
+- View material sales reports.
+- Export CSV.
+
+## 25.7 Audit logs
+
+Administrators can view:
+
+- Actor.
+- Action.
+- Target record.
+- Timestamp.
+- Relevant details.
+
+Audit logs should be append-only from normal application operations.
+
+---
+
+# PART 26 — REPORTING
+
+Implement functional reporting.
+
+## 26.1 Collection report
+
+Include:
+
+- Total kilograms.
+- Material category.
+- Collection dates.
+- Agent.
+- Collection point.
+- Status.
+
+## 26.2 User report
+
+Include:
+
+- Registered users.
+- Active users.
+- Verified contributions.
+- Collection participation.
+
+## 26.3 Reward report
+
+Include:
+
+- Points issued.
+- Points redeemed.
+- Learning bonus points.
+- Adjustments.
+- Outstanding points.
+
+## 26.4 Redemption report
+
+Include:
+
+- Requests.
+- Amount.
+- Method.
+- Status.
+- Date.
+
+## 26.5 Inventory report
+
+Include:
+
+- Material category.
+- Quantity available.
+- Quantity batched.
+- Quantity sold.
+- Quantity transferred.
+
+## 26.6 Sales report
+
+Include:
+
+- Buyer.
+- Material.
+- Quantity.
+- Unit price.
+- Total value.
+- Transfer status.
+- Payment status.
+
+## 26.7 Export
+
+Provide CSV exports for relevant reports.
+
+CSV exports must respect permissions.
+
+---
+
+# PART 27 — FUTURE WASTE-TO-ENERGY READINESS
+
+KILN is intended to become a broader resource recovery platform.
+
+The MVP must be architecturally ready for future integration but must not attempt to build industrial W2E plant controls.
+
+## 27.1 Waste stream separation
+
+Distinguish:
+
+- Recyclable materials.
+- Organic W2E feedstock.
+- Residual waste.
+
+## 27.2 Future organic waste
+
+Future support may include:
+
+- Organic feedstock collection.
+- Organic waste batches.
+- Feedstock measurements.
+- Anaerobic digestion records.
+- Biogas production.
+- Methane measurements.
+- Electricity generation.
+- Electricity distribution.
+- Energy customers.
+
+These features are not required to be operational in the current MVP.
+
+## 27.3 Architecture
+
+Do not mix organic feedstock records with plastic, aluminium, paper or cardboard inventory.
+
+Keep future modules modular.
+
+---
+
+# PART 28 — DATABASE MODELS
+
+Create appropriately structured relational models.
+
+Suggested models:
+
+1. User.
+2. UserProfile.
+3. CollectionAgentProfile.
+4. MaterialCategory.
+5. CollectionPoint.
+6. CollectionRequest.
+7. CollectionAssignment.
+8. WasteSubmission.
+9. WeightVerification.
+10. RewardRateHistory.
+11. RewardWallet.
+12. RewardTransaction.
+13. RedemptionRequest.
+14. LearningCompletion.
+15. MaterialInventory.
+16. MaterialBatch.
+17. MaterialSaleTransfer.
+18. Notification.
+19. AuditLog.
+
+Additional models may be required for:
+
+- Nostr authentication challenges.
+- NWC connection metadata.
+- Nostr publishing records.
+- AI classification records.
+- Learning modules.
+- Learning quiz attempts.
+- Payment reconciliation.
+- Integration settings.
+
+## 28.1 Data integrity
+
+Use:
+
+- Appropriate foreign keys.
+- Unique constraints.
+- Indexes.
+- Decimal fields.
+- Timestamps.
+- Transactional operations.
+
+Do not use floating-point arithmetic for rewards, weights or money.
+
+## 28.2 Constraints
+
+Enforce:
+
+- Unique collection reference.
+- Unique assignment constraints where applicable.
+- One verification per submission.
+- One reward credit per verification.
+- Unique learning completion per user/module.
+- Redemption integrity.
+- Inventory allocation integrity.
+- Batch traceability.
+- Valid status transitions.
+
+---
+
+# PART 29 — SECURITY
+
+Implement security from the beginning.
+
+## 29.1 Authentication
+
+Use secure authentication.
+
+## 29.2 Permissions
+
+Use server-side role enforcement.
+
+## 29.3 Data access
+
+Users must only access their own private records.
+
+Agents must only access permitted assignments and operational information.
+
+## 29.4 Wallet integrity
+
+- Use atomic transactions.
+- Use appropriate locking.
+- Prevent duplicate credits.
+- Prevent double redemption.
+- Prevent negative balances.
+- Require audit records for adjustments.
+
+## 29.5 File uploads
+
+Validate:
+
+- File size.
+- File type.
+- File extension.
+- MIME type where appropriate.
+
+Do not trust uploaded filenames.
+
+## 29.6 NWC
+
+Treat NWC credentials as sensitive secrets.
+
+## 29.7 Nostr
+
+Never expose private keys.
+
+## 29.8 AI
+
+AI output must not automatically approve materials or award points.
+
+## 29.9 CSRF
+
+Implement appropriate CSRF protection.
+
+## 29.10 Audit
+
+Record sensitive administrative actions.
+
+---
+
+# PART 30 — SEED DATA AND DEMONSTRATION
+
+Provide a seed command.
+
+Example:
+
+`python manage.py seed_demo`
+
+Create clearly labelled demo accounts.
+
+Suggested:
+
+Administrator:
+`admin@kiln.demo`
+
+Agent:
+`agent@kiln.demo`
+
+User:
+`student@kiln.demo`
+
+The seed command should:
+
+- Create demo accounts.
+- Create material categories.
+- Create demo reward rates.
+- Create demo collection points.
+- Create demo collection requests.
+- Create demo inventory.
+- Create demo batches.
+- Create demo ledger transactions.
+- Create demo redemption requests.
+- Create demo notifications.
+- Create demo learning records where appropriate.
+
+Demo data must be clearly labelled.
+
+Do not publish demo records to Nostr.
+
+Do not trigger real Bitcoin payments.
+
+Do not present demo impact metrics as real-world impact.
+
+Document the demo account passwords and recommend changing them before any deployment.
+
+---
+
+# PART 31 — TESTING
+
+Implement tests for important functionality.
+
+## 31.1 Authentication tests
+
+- Registration.
+- Login.
+- Role access.
+- Password behaviour.
+
+## 31.2 Collection tests
+
+- Request creation.
+- Status transitions.
+- Assignment.
+- Agent acceptance.
+- Agent submission.
+- Verification.
+
+## 31.3 Reward tests
+
+- Correct calculation.
+- Rate snapshot.
+- Duplicate reward prevention.
+- Atomic crediting.
+- Manual adjustment audit.
+- Negative balance prevention.
+
+## 31.4 Redemption tests
+
+- Minimum threshold.
+- Valid redemption.
+- Invalid redemption.
+- Double redemption prevention.
+- Simulated payment.
+- Payment failure.
+
+## 31.5 Inventory tests
+
+- Inventory creation.
+- Batch creation.
+- Quantity validation.
+- Traceability.
+- Sale.
+- Transfer.
+- Preventing overselling.
+
+## 31.6 AI tests
+
+- Rule-based fallback.
+- Invalid input.
+- Classification response.
+- Manual category selection.
+
+## 31.7 Nostr tests
+
+- Privacy.
+- Publishing failure.
+- Duplicate publishing.
+- Demo isolation.
+
+## 31.8 Learning tests
+
+- Module completion.
+- Quiz validation.
+- Bonus credit.
+- Duplicate bonus prevention.
+
+## 31.9 Security tests
+
+- User access restrictions.
+- Agent restrictions.
+- Admin restrictions.
+- CSRF.
+- File upload validation.
+- Sensitive data exposure.
+
+Do not claim tests passed unless they have actually been run.
+
+---
+
+# PART 32 — PERFORMANCE AND LOW-BANDWIDTH SUPPORT
+
+The application must work reasonably well on low-bandwidth networks.
+
+## Requirements
+
+- Lightweight pages.
+- Minimal unnecessary JavaScript.
+- Efficient database queries.
+- Pagination.
+- Optimised image uploads.
+- Responsive layouts.
+- Lazy loading where appropriate.
+- Clear loading states.
+- Graceful failure handling.
+
+Avoid unnecessary animations and large assets.
+
+Collection agents and users around FUTO must be able to use the application on ordinary mobile devices and networks.
+
+---
+
+# PART 33 — DEPLOYMENT
+
+Provide:
+
+- Dockerfile.
+- Docker Compose configuration.
+- Run script.
+- Environment configuration.
+- Database migration instructions.
+- Seed instructions.
+- README.
+
+Provide an easy local startup workflow.
+
+Where Docker is available, support a command such as:
+
+`docker compose up --build`
+
+Ensure:
+
+- Database starts correctly.
+- Migrations run.
+- Seed data can be loaded.
+- Application starts.
+- Health checks are available where appropriate.
+
+Do not assume deployment services or credentials exist.
+
+Document any required configuration.
+
+---
+
+# PART 34 — README
+
+Create a comprehensive README.
+
+Include:
+
+1. Project overview.
+2. Problem statement.
+3. Solution.
+4. Pilot area.
+5. Features.
+6. Architecture.
+7. Database structure.
+8. Role permissions.
+9. Technology stack.
+10. Installation.
+11. Environment configuration.
+12. Startup instructions.
+13. Demo accounts.
+14. Testing.
+15. AI integration setup.
+16. Lightning demo setup.
+17. NWC integration setup.
+18. Nostr setup.
+19. Security considerations.
+20. Limitations.
+21. Future roadmap.
+22. W2E integration vision.
+
+Include an architecture diagram.
+
+Use a Mermaid diagram where appropriate.
+
+---
+
+# PART 35 — DEVELOPMENT EXECUTION STRATEGY
+
+Do not generate the entire application in one unverified step.
+
+Implement it in stages.
+
+### Stage 1: Project foundation
+
+- Directory structure.
+- Django configuration.
+- Database.
+- Custom user.
+- Authentication.
+- Role permissions.
+- Base design system.
+
+### Stage 2: Public website
+
+- Landing page.
+- Materials.
+- How it works.
+- Pilot information.
+- Registration.
+- Login.
+
+### Stage 3: Collection workflow
+
+- Collection request.
+- Collection point.
+- Agent assignment.
+- Agent dashboard.
+- Weight recording.
+- Verification.
+
+### Stage 4: Rewards
+
+- Reward rates.
+- Wallet.
+- Ledger.
+- Reward calculations.
+- Redemption requests.
+- Admin approval.
+
+### Stage 5: Inventory
+
+- Inventory.
+- Batches.
+- Sales.
+- Transfers.
+- Traceability.
+
+### Stage 6: Bitcoin and Nostr
+
+- Lightning simulation.
+- Optional NWC.
+- Optional Nostr authentication.
+- Proof-of-Recycling publishing.
+- Payment status handling.
+
+### Stage 7: AI and learning
+
+- Waste sorter.
+- Fallback classifier.
+- Learning modules.
+- Quizzes.
+- Bonus ledger.
+
+### Stage 8: Admin, reports and notifications
+
+- Administrative dashboard.
+- Reports.
+- CSV exports.
+- Audit logs.
+- Notifications.
+
+### Stage 9: Testing and refinement
+
+- Run tests.
+- Correct errors.
+- Verify critical workflows.
+- Review responsiveness.
+- Review security.
+- Review UI consistency.
+
+## Important execution rules
+
+- Maintain a working application throughout development.
+- Do not abandon functionality to make the UI look impressive.
+- Do not create static pages in place of working functionality.
+- Do not silently omit features.
+- Do not fabricate operational results.
+- Do not make real Bitcoin payments in demo mode.
+- Do not publish demo impact data.
+- Do not expose credentials.
+- Do not claim functionality exists unless implemented.
+- Do not claim tests passed unless run.
+- If a feature cannot be fully implemented, clearly explain what was implemented, what is incomplete and why.
+- Make reasonable decisions without constantly asking me questions.
+- Prioritise working functionality, security, maintainability, performance and professional design.
+
+---
+
+# PART 36 — FINAL MVP ACCEPTANCE TEST
+
+The application must demonstrate this complete workflow:
+
+1. A new user registers.
+2. The user logs in.
+3. The user views the materials.
+4. The user uses the AI Waste Sorter or manually selects a category.
+5. The user submits a collection request.
+6. The request receives a reference number.
+7. An administrator views the request.
+8. An administrator assigns an agent.
+9. The agent accepts the assignment.
+10. The agent records actual material weight.
+11. The agent records contamination and quality where appropriate.
+12. The agent submits the collection record.
+13. An administrator reviews it.
+14. The administrator approves the verification.
+15. The system calculates the reward.
+16. The system credits the user's ledger.
+17. The user sees the balance and transaction.
+18. The system creates inventory.
+19. The administrator batches the material.
+20. The administrator records a sale or transfer.
+21. The user submits a redemption request.
+22. The administrator reviews the redemption.
+23. The redemption is processed in demo mode or via a configured payment service.
+24. The transaction is recorded.
+25. The user receives notification.
+26. The administrator views the reports.
+27. The system can export reports.
+28. The approved recycling record can be published as a privacy-preserving Nostr event when configured.
+29. The user completes a learning module.
+30. The system awards the learning bonus once only.
+
+The MVP must be tested against this workflow.
+
+---
+
+# FINAL OBJECTIVE
+
+Build KILN as a functional community recycling and resource recovery platform.
+
+The platform should provide a complete digital operating workflow:
+
+**Participant → Collection Request → Collection Agent → Physical Weighing → Administrator Verification → Reward Ledger → Redemption → Inventory → Material Batch → Recycling Buyer**
+
+Supporting features include:
+
+**AI Waste Sorter → Learning Modules → Bitcoin Lightning Demonstration → Optional NWC → Optional Nostr Authentication → Public Proof-of-Recycling**
+
+The long-term architecture must support:
+
+**Recyclables → Material Recovery**
+
+and future:
+
+**Organic Waste → Anaerobic Digestion → Biogas → Electricity**
+
+But the current MVP must remain focused on the recycling operation and the functionality described above.
+
+Build a real, testable, maintainable application with a distinctive professional design.
+
+**Project: KILN**
+
+**Tagline: Turn Waste Into Worth.**
+
+**Pilot: FUTO and surrounding communities, Imo State, Nigeria.**

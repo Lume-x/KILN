@@ -1,0 +1,8 @@
+{
+  "name": "KILN",
+  "description": "Turn Waste Into Worth. Community recycling, recyclable material collection, physical weighing verification, and rewards for FUTO and surrounding communities in Owerri, Imo State, Nigeria.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
